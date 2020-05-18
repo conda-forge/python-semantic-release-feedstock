@@ -1,20 +1,20 @@
 {% set name = "python-semantic-release" %}
-{% set version = "6.2.0" %}
+{% set version = "6.4.1" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: e199bf0f56e3663b6926387c42c1a0e8194f34dbd9e189142753e67889043c08
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: acafa4cf724e2983f0bb4aebdf0ffbf9c63999dbc568ed704d1c9b4736123337
 
 build:
   noarch: python
   number: 0
   entry_points:
     - semantic-release=semantic_release.cli:entry
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -43,16 +43,14 @@ test:
     - semantic-release --help
 
 about:
-  home: "http://github.com/relekang/python-semantic-release"
+  home: http://github.com/relekang/python-semantic-release
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "Automatic semantic versioning for python projects"
+  summary: Automatic semantic versioning for python projects
   doc_url: https://python-semantic-release.readthedocs.io/en/latest/
   dev_url: https://github.com/relekang/python-semantic-release
-  description: "Automatic semantic versioning for python projects. \
-    This is an python implementation of the semantic-release for js by Stephan Bönnemann. \
-    If you find this topic interesting you should check out his talk from JSConf Budapest."
+  description: Automatic semantic versioning for python projects. This is an python implementation of the semantic-release for js by Stephan Bönnemann. If you find this topic interesting you should check out his talk from JSConf Budapest.
 
 extra:
   recipe-maintainers:
