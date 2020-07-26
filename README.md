@@ -5,7 +5,7 @@ Home: http://github.com/relekang/python-semantic-release
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Automatic semantic versioning for python projects
 
