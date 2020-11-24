@@ -5,9 +5,13 @@ Home: http://github.com/relekang/python-semantic-release
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/python-semantic-release-feedstock/blob/master/LICENSE.txt)
 
 Summary: Automatic semantic versioning for python projects
+
+Development: https://github.com/relekang/python-semantic-release
+
+Documentation: https://python-semantic-release.readthedocs.io/en/latest/
 
 Automatic semantic versioning for python projects. This is an python implementation of the semantic-release for js by Stephan Bönnemann. If you find this topic interesting you should check out his talk from JSConf Budapest.
 
