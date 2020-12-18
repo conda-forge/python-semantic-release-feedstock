@@ -1,5 +1,5 @@
 {% set name = "python-semantic-release" %}
-{% set version = "7.7.0" %}
+{% set version = "7.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b8a3dbb1651dd003c97be445581343f9ebfa76d97232812d3a26b2e65cde2bb4
+  sha256: eb9db4b07963b4ba2ad92c3366895d22fa12e5eeb93394f7c73e752429134039
 
 build:
   noarch: python
@@ -19,15 +19,15 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
   run:
     - click >=7,<8.0
     - click-log >=0.3,<1
     - gitpython >=3.0.8,<4
     - invoke >=1.4.1,<2
-    - python
+    - python >=3.6
     - python-gitlab >=1.10,<2
-    - requests >=2.21,<3
+    - requests >=2.25,<3
     - semver >=2.8,<3
     - toml ==0.10.0
     - twine >=3,<4
