@@ -26,7 +26,7 @@ requirements:
     - gitpython >=3.0.8,<4
     - invoke >=1.4.1,<2
     - python >=3.6
-    - python-gitlab >=1.10,<2
+    - python-gitlab >=1.10,<3
     - requests >=2.25,<3
     - semver >=2.10,<3
     - tomlkit >=0.7.0,<1.0.0
