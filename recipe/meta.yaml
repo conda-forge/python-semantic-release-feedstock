@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - semantic-release=semantic_release.cli:entry
   script: {{ PYTHON }} -m pip install . -vv
@@ -26,13 +26,15 @@ requirements:
     - gitpython >=3.0.8,<4
     - invoke >=1.4.1,<2
     - python >=3.6
-    - python-gitlab >=1.10,<3
+    - python-gitlab >=2,<4
     - requests >=2.25,<3
     - semver >=2.10,<3
-    - tomlkit ==0.7.0
+    - tomlkit >=0.10,<1
     - dotty-dict >=1.3.0,<2
     - twine >=3,<4
     - wheel
+    - packaging
+    - dataclasses ==0.8
 
 test:
   requires:
