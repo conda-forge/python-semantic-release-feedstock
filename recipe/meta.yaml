@@ -34,7 +34,7 @@ requirements:
     - twine >=3,<4
     - wheel
     - packaging
-    - dataclasses ==0.8 # [py==36]
+    - dataclasses ==0.8
 
 test:
   requires:
