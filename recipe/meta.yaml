@@ -1,5 +1,5 @@
 {% set name = "python-semantic-release" %}
-{% set version = "7.34.3" %}
+{% set version = "7.34.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ac62990d6c5510ae41abcae34c775ced7cba7b3ed9176578b7954eb956537dbb
+  sha256: e9b8fb788024ae9510a924136d573588415a16eeca31cc5240f2754a80a2e831
 
 build:
   noarch: python
-  number: 1
+  number: 0
   entry_points:
     - semantic-release=semantic_release.cli:entry
   script: {{ PYTHON }} -m pip install . -vv
