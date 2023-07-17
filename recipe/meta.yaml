@@ -42,7 +42,6 @@ test:
     - git
   imports:
     - semantic_release
-    - semantic_release.history
   commands:
     - semantic-release --help
 
