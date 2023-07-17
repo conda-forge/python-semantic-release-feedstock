@@ -1,5 +1,5 @@
 {% set name = "python-semantic-release" %}
-{% set version = "7.34.6" %}
+{% set version = "8.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e9b8fb788024ae9510a924136d573588415a16eeca31cc5240f2754a80a2e831
+  sha256: 8f685c0145dc0d192bb133f5ab682608d3f92aa7fdbcd3268c2e404233afc6d8
 
 build:
   noarch: python
   number: 0
   entry_points:
-    - semantic-release=semantic_release.cli:entry
+    - semantic-release=semantic_release.cli:main
+    - psr=semantic_release.cli:main
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -22,15 +23,17 @@ requirements:
     - python >=3.7
   run:
     - click >=7,<9.0
-    - click-log >=0.3,<1
+    - dotty-dict >=1.3.0,<2
     - gitpython >=3.0.8,<4
-    - invoke >=1.4.1,<3
+    - importlib-resources ==5.7
+    - jinja2 >=3.1.2,<4
+    - pydantic >=1.10.2,<2
     - python >=3.7
     - python-gitlab >=2,<4
     - requests >=2.25,<3
-    - semver >=2.10,<3
+    - rich >=12.5.1
+    - shellingham >=1.5.0
     - tomlkit >=0.10,<1
-    - dotty-dict >=1.3.0,<2
     - twine >=3,<4
     - wheel
     - packaging
@@ -40,7 +43,6 @@ test:
     - git
   imports:
     - semantic_release
-    - semantic_release.history
   commands:
     - semantic-release --help
 
