@@ -1,5 +1,5 @@
 {% set name = "python-semantic-release" %}
-{% set version = "8.0.3" %}
+{% set version = "8.0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f3f9492b7edfdea43e8bea6d44c116d3435d584abe1cb8e17424ef67058e14f4
+  sha256: ff661d119edef49cb946870802767d4407ffddd7ba24f13a33259e33d1e53206
 
 build:
   noarch: python
