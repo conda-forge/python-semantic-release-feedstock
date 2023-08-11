@@ -1,5 +1,5 @@
 {% set name = "python-semantic-release" %}
-{% set version = "8.0.3" %}
+{% set version = "8.0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f3f9492b7edfdea43e8bea6d44c116d3435d584abe1cb8e17424ef67058e14f4
+  sha256: 04d9ed41f5b526b6fb0997c4f08c143a688604e88024667ea7e8135e795b2930
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
     - pip
     - python >=3.7
   run:
-    - click >=7,<9.0
+    - click >=8,<9.0
     - dotty-dict >=1.3.0,<2
     - gitpython >=3.0.8,<4
     - importlib-resources ==5.7
