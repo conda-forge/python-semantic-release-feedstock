@@ -39,9 +39,11 @@ requirements:
 test:
   requires:
     - git
+    - pip
   imports:
     - semantic_release
   commands:
+    - pip check
     - semantic-release --help
 
 about:
