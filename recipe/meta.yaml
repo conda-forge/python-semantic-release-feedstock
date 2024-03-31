@@ -1,5 +1,5 @@
 {% set name = "python-semantic-release" %}
-{% set version = "9.3.1" %}
+{% set version = "9.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d92e1a3fbd5259dc67afad7e21977b08a301a5ba0ffd0f497ef9d330440a2dc0
+  sha256: b507ffd246af3d69237056789fa74cc0b3be00e88bffde1c00fc72e27ab24ce8
 
 build:
   noarch: python
@@ -32,7 +32,7 @@ requirements:
     - python >=3.8
     - python-gitlab >=2,<5
     - requests >=2.25,<3
-    - rich >=12.5.1
+    - rich >=12.5.1,<13
     - shellingham >=1.5.0
     - tomlkit >=0.11,<1
 
