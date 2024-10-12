@@ -1,5 +1,5 @@
 {% set name = "python-semantic-release" %}
-{% set version = "9.10.0" %}
+{% set version = "9.10.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 45a0199f7805dfe76bb57b932be4a9a5a3f7ff03a897c375eb5a1fa5dcfe5608
+  sha256: aaef61324e615203dfa791b731512a1ce576ea17d84436bc339d3fef071b9aa2
 
 build:
   noarch: python
@@ -21,6 +21,7 @@ requirements:
   host:
     - pip
     - python >=3.8
+    - setuptools
   run:
     - click >=8,<9.0
     - click-option-group >=0.5,<0.6
