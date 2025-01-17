@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - semantic-release=semantic_release.cli.commands.main:main
     - psr=semantic_release.cli.commands.main:main
@@ -20,7 +20,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools
   run:
     - click >=8,<9.0
@@ -30,7 +30,7 @@ requirements:
     - importlib-resources >=5.7,<7
     - jinja2 >=3.1.2,<4
     - pydantic >=2,<3
-    - python >=3.8
+    - python >={{ python_min }}
     - python-gitlab >=2,<5
     - requests >=2.25,<3
     - rich >=13,<14
@@ -41,6 +41,7 @@ test:
   requires:
     - git
     - pip
+    - python {{ python_min }}
   imports:
     - semantic_release
   commands:
