@@ -1,5 +1,5 @@
 {% set name = "python-semantic-release" %}
-{% set version = "10.3.2" %}
+{% set version = "10.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: c171d610c04f7c42ccf3e39073ec76afc98e0bd2ed704872790035fea1256e61
+  sha256: 1528e939af2d3128be471d94bb39a675f35adb4ea17e9c4bf4f86289cc20e006
 
 build:
   noarch: python
